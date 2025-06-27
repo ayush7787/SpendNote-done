@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SpendNote Light Theme */
+    --background: 0 0% 98%; /* Almost white */
+    --foreground: 240 10% 3.9%; /* Dark blue/gray for text */
+
+    --card: 0 0% 100%; /* White card */
+    --card-foreground: 240 10% 3.9%; /* Dark text on card */
+
+    --popover: 0 0% 100%; /* White popover */
+    --popover-foreground: 240 10% 3.9%; /* Dark text on popover */
+
+    --primary: 145 65% 40%; /* Primary Green */
+    --primary-foreground: 0 0% 98%; /* White text on primary */
+
+    --secondary: 145 50% 50%; /* Lighter Green variant */
+    --secondary-foreground: 0 0% 98%; /* Light text on secondary */
+
+    --muted: 0 0% 90%; /* Light gray for muted elements */
+    --muted-foreground: 0 0% 45%; /* Mid gray for muted text */
+
+    --accent: 145 60% 55%; /* Lighter Green for FAB */
+    --accent-foreground: 0 0% 98%; /* White text for FAB icon/text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* Standard destructive red */
+    --destructive-foreground: 0 0% 98%; /* White text on destructive */
+
+    --border: 0 0% 89.8%; /* Light gray border */
+    --input: 0 0% 93%; /* Slightly darker gray for input background */
+    --ring: 145 65% 50%; /* Green for ring */
+
+    --radius: 0.5rem;
+
+    /* Chart colors for light theme (adjust if used) */
+    --chart-1: 145 60% 45%;
+    --chart-2: 145 50% 60%;
+    --chart-3: 90 50% 50%;
+    --chart-4: 60 70% 60%;
+    --chart-5: 160 40% 70%;
+  }
+
+  .dark {
+    /* SpendNote Dark Theme (Green based) */
+    --background: 150 10% 12%; 
+    --foreground: 0 0% 90%; 
+
+    --card: 150 10% 18%; 
+    --card-foreground: 0 0% 90%; 
+
+    --popover: 150 10% 20%; 
+    --popover-foreground: 0 0% 90%; 
+
+    --primary: 145 65% 40%; 
+    --primary-foreground: 0 0% 98%; 
+
+    --secondary: 145 50% 30%; 
+    --secondary-foreground: 0 0% 95%; 
+
+    --muted: 150 10% 25%; 
+    --muted-foreground: 0 0% 60%; 
+
+    --accent: 145 60% 55%; 
+    --accent-foreground: 0 0% 10%; 
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 10% 30%; 
+    --input: 150 10% 22%; 
+    --ring: 145 65% 50%; 
+
+    /* Chart colors for dark theme */
+    --chart-1: 145 60% 45%;
+    --chart-2: 145 50% 60%;
+    --chart-3: 90 50% 50%;
+    --chart-4: 60 70% 60%;
+    --chart-5: 160 40% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
